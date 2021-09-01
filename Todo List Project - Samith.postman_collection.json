@@ -1,0 +1,334 @@
+{
+	"info": {
+		"_postman_id": "bb821fba-1037-461f-bd81-63ac8846d8a1",
+		"name": "Todo List Project - Samith",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication APIs",
+			"item": [
+				{
+					"name": "Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"samith\",\n    \"last_name\": \"Basnayaka\",\n    \"username\": \"sam\",\n    \"password\": \"123\",\n    \"user_type\": \"User\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign In",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"sam\",\n    \"password\": \"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ToDo List APIs",
+			"item": [
+				{
+					"name": "Add Todos",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTIwZTMxMDgxNTM5ZTE0ZTkzNWEwMmYiLCJpYXQiOjE2Mjk1NTE5MDQyNTYsImV4cCI6MTYyOTU1MTk5MDY1Nn0.EiV1TRKS37bYCk5WRJfhN3b4M-JbNeWm5oY2DOix3cGYhEdb7YOA28uQXZCK0Nd3LOSJibiBF-MD93uVVqTQIXJwPbycSFhpOy-K0DxVAkDLq6_RI8h6gLk1J6pMwcHourb1XaImsQLdgcJca1CgtRZRdfSFNr7efwW46kjndlZix9RW9ZnL59hBAdfU88Dm2LKvtH80xf5qjmyNeI0EysvviLza4D9HNAFnZnqWz7nmEePKDQqkdB2vXfKQSYc31ZCgLxzIKLboZY8DngrRnI-yvteC4sWPW0nrJ_GwvrwIJ9AQFRhs1FdQ-DcA_g7IzObSmnmbhlfPYQ9wUusKfa2cKj2WhRdFbFVXZG8ykUYXBy-tZ0QLXdvt9s2Hrr5mF_jUKM8brmPRT35uk4ufcZOmWahJFYpP2yDDvhlprc8f8_6ZJyAf3eTp3HOjzr5BXjht8KotQ5PPqz91-DDP6Tpzvto9o_MFR-EU4YzQ4fDkEmndw-9SOoLMjuV2rtSe2LbyF6OcUS8ElWkFSGXUke4vPkCnyAJ8e5GoLzDFH350R41y8Ee54ig9Y1ZkTPNCnZicwXa2Ex3kqVAtATyZlncMA3_K3TVH5vKllPmAcZA4h4hKzRVz_Un9UM8IXHBGeOcIqblnEqP_PAmF3ZgK6p2C0LZmQvCkbcKwh4TfR9c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"todo_item_name\": \"one\",\n        \"todo_item_description\": \"test desc\"\n    },\n    {\n        \"todo_item_name\": \"two\",\n        \"todo_item_description\": \"test desc\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/todo/addTodos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"todo",
+								"addTodos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Todos",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTIwZTMxMDgxNTM5ZTE0ZTkzNWEwMmYiLCJpYXQiOjE2Mjk1NTE5MDQyNTYsImV4cCI6MTYyOTU1MTk5MDY1Nn0.EiV1TRKS37bYCk5WRJfhN3b4M-JbNeWm5oY2DOix3cGYhEdb7YOA28uQXZCK0Nd3LOSJibiBF-MD93uVVqTQIXJwPbycSFhpOy-K0DxVAkDLq6_RI8h6gLk1J6pMwcHourb1XaImsQLdgcJca1CgtRZRdfSFNr7efwW46kjndlZix9RW9ZnL59hBAdfU88Dm2LKvtH80xf5qjmyNeI0EysvviLza4D9HNAFnZnqWz7nmEePKDQqkdB2vXfKQSYc31ZCgLxzIKLboZY8DngrRnI-yvteC4sWPW0nrJ_GwvrwIJ9AQFRhs1FdQ-DcA_g7IzObSmnmbhlfPYQ9wUusKfa2cKj2WhRdFbFVXZG8ykUYXBy-tZ0QLXdvt9s2Hrr5mF_jUKM8brmPRT35uk4ufcZOmWahJFYpP2yDDvhlprc8f8_6ZJyAf3eTp3HOjzr5BXjht8KotQ5PPqz91-DDP6Tpzvto9o_MFR-EU4YzQ4fDkEmndw-9SOoLMjuV2rtSe2LbyF6OcUS8ElWkFSGXUke4vPkCnyAJ8e5GoLzDFH350R41y8Ee54ig9Y1ZkTPNCnZicwXa2Ex3kqVAtATyZlncMA3_K3TVH5vKllPmAcZA4h4hKzRVz_Un9UM8IXHBGeOcIqblnEqP_PAmF3ZgK6p2C0LZmQvCkbcKwh4TfR9c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"todo_item_description\": \"123 desc 123\",\n        \"_id\": \"6121ad93c2df001ac228ffe5\",\n        \"todo_item_name\": \"123\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/todo/updateTodos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"todo",
+								"updateTodos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Todos",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTIwZTMxMDgxNTM5ZTE0ZTkzNWEwMmYiLCJpYXQiOjE2Mjk1NTE5MDQyNTYsImV4cCI6MTYyOTU1MTk5MDY1Nn0.EiV1TRKS37bYCk5WRJfhN3b4M-JbNeWm5oY2DOix3cGYhEdb7YOA28uQXZCK0Nd3LOSJibiBF-MD93uVVqTQIXJwPbycSFhpOy-K0DxVAkDLq6_RI8h6gLk1J6pMwcHourb1XaImsQLdgcJca1CgtRZRdfSFNr7efwW46kjndlZix9RW9ZnL59hBAdfU88Dm2LKvtH80xf5qjmyNeI0EysvviLza4D9HNAFnZnqWz7nmEePKDQqkdB2vXfKQSYc31ZCgLxzIKLboZY8DngrRnI-yvteC4sWPW0nrJ_GwvrwIJ9AQFRhs1FdQ-DcA_g7IzObSmnmbhlfPYQ9wUusKfa2cKj2WhRdFbFVXZG8ykUYXBy-tZ0QLXdvt9s2Hrr5mF_jUKM8brmPRT35uk4ufcZOmWahJFYpP2yDDvhlprc8f8_6ZJyAf3eTp3HOjzr5BXjht8KotQ5PPqz91-DDP6Tpzvto9o_MFR-EU4YzQ4fDkEmndw-9SOoLMjuV2rtSe2LbyF6OcUS8ElWkFSGXUke4vPkCnyAJ8e5GoLzDFH350R41y8Ee54ig9Y1ZkTPNCnZicwXa2Ex3kqVAtATyZlncMA3_K3TVH5vKllPmAcZA4h4hKzRVz_Un9UM8IXHBGeOcIqblnEqP_PAmF3ZgK6p2C0LZmQvCkbcKwh4TfR9c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    \"61218ec8da466f197c810423\"\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/todo/deleteTodos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"todo",
+								"deleteTodos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Todo Status",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTIwZTMxMDgxNTM5ZTE0ZTkzNWEwMmYiLCJpYXQiOjE2Mjk1NTE5MDQyNTYsImV4cCI6MTYyOTU1MTk5MDY1Nn0.EiV1TRKS37bYCk5WRJfhN3b4M-JbNeWm5oY2DOix3cGYhEdb7YOA28uQXZCK0Nd3LOSJibiBF-MD93uVVqTQIXJwPbycSFhpOy-K0DxVAkDLq6_RI8h6gLk1J6pMwcHourb1XaImsQLdgcJca1CgtRZRdfSFNr7efwW46kjndlZix9RW9ZnL59hBAdfU88Dm2LKvtH80xf5qjmyNeI0EysvviLza4D9HNAFnZnqWz7nmEePKDQqkdB2vXfKQSYc31ZCgLxzIKLboZY8DngrRnI-yvteC4sWPW0nrJ_GwvrwIJ9AQFRhs1FdQ-DcA_g7IzObSmnmbhlfPYQ9wUusKfa2cKj2WhRdFbFVXZG8ykUYXBy-tZ0QLXdvt9s2Hrr5mF_jUKM8brmPRT35uk4ufcZOmWahJFYpP2yDDvhlprc8f8_6ZJyAf3eTp3HOjzr5BXjht8KotQ5PPqz91-DDP6Tpzvto9o_MFR-EU4YzQ4fDkEmndw-9SOoLMjuV2rtSe2LbyF6OcUS8ElWkFSGXUke4vPkCnyAJ8e5GoLzDFH350R41y8Ee54ig9Y1ZkTPNCnZicwXa2Ex3kqVAtATyZlncMA3_K3TVH5vKllPmAcZA4h4hKzRVz_Un9UM8IXHBGeOcIqblnEqP_PAmF3ZgK6p2C0LZmQvCkbcKwh4TfR9c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"todo_item_status\": true,\n    \"todo_item_status_string\": \"Done\",\n    \"todo_item_ids\": [\n        \"61218a2d9f637c19232e2a14\",\n        \"61218ecada466f197c810428\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/todo/changeStatus",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"todo",
+								"changeStatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Todo Index",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTIwZTMxMDgxNTM5ZTE0ZTkzNWEwMmYiLCJpYXQiOjE2Mjk1NTE5MDQyNTYsImV4cCI6MTYyOTU1MTk5MDY1Nn0.EiV1TRKS37bYCk5WRJfhN3b4M-JbNeWm5oY2DOix3cGYhEdb7YOA28uQXZCK0Nd3LOSJibiBF-MD93uVVqTQIXJwPbycSFhpOy-K0DxVAkDLq6_RI8h6gLk1J6pMwcHourb1XaImsQLdgcJca1CgtRZRdfSFNr7efwW46kjndlZix9RW9ZnL59hBAdfU88Dm2LKvtH80xf5qjmyNeI0EysvviLza4D9HNAFnZnqWz7nmEePKDQqkdB2vXfKQSYc31ZCgLxzIKLboZY8DngrRnI-yvteC4sWPW0nrJ_GwvrwIJ9AQFRhs1FdQ-DcA_g7IzObSmnmbhlfPYQ9wUusKfa2cKj2WhRdFbFVXZG8ykUYXBy-tZ0QLXdvt9s2Hrr5mF_jUKM8brmPRT35uk4ufcZOmWahJFYpP2yDDvhlprc8f8_6ZJyAf3eTp3HOjzr5BXjht8KotQ5PPqz91-DDP6Tpzvto9o_MFR-EU4YzQ4fDkEmndw-9SOoLMjuV2rtSe2LbyF6OcUS8ElWkFSGXUke4vPkCnyAJ8e5GoLzDFH350R41y8Ee54ig9Y1ZkTPNCnZicwXa2Ex3kqVAtATyZlncMA3_K3TVH5vKllPmAcZA4h4hKzRVz_Un9UM8IXHBGeOcIqblnEqP_PAmF3ZgK6p2C0LZmQvCkbcKwh4TfR9c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"_id\": \"61218ecada466f197c810428\",\n        \"todo_item_index\": 1\n    },\n    {\n        \"_id\": \"61218ec8da466f197c810423\",\n        \"todo_item_index\": 2\n    },\n    {\n        \"_id\": \"61218a2d9f637c19232e2a14\",\n        \"todo_item_index\": 3\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/todo/changeIndexes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"todo",
+								"changeIndexes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Todo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTIwZTMxMDgxNTM5ZTE0ZTkzNWEwMmYiLCJpYXQiOjE2Mjk1NTE5MDQyNTYsImV4cCI6MTYyOTU1MTk5MDY1Nn0.EiV1TRKS37bYCk5WRJfhN3b4M-JbNeWm5oY2DOix3cGYhEdb7YOA28uQXZCK0Nd3LOSJibiBF-MD93uVVqTQIXJwPbycSFhpOy-K0DxVAkDLq6_RI8h6gLk1J6pMwcHourb1XaImsQLdgcJca1CgtRZRdfSFNr7efwW46kjndlZix9RW9ZnL59hBAdfU88Dm2LKvtH80xf5qjmyNeI0EysvviLza4D9HNAFnZnqWz7nmEePKDQqkdB2vXfKQSYc31ZCgLxzIKLboZY8DngrRnI-yvteC4sWPW0nrJ_GwvrwIJ9AQFRhs1FdQ-DcA_g7IzObSmnmbhlfPYQ9wUusKfa2cKj2WhRdFbFVXZG8ykUYXBy-tZ0QLXdvt9s2Hrr5mF_jUKM8brmPRT35uk4ufcZOmWahJFYpP2yDDvhlprc8f8_6ZJyAf3eTp3HOjzr5BXjht8KotQ5PPqz91-DDP6Tpzvto9o_MFR-EU4YzQ4fDkEmndw-9SOoLMjuV2rtSe2LbyF6OcUS8ElWkFSGXUke4vPkCnyAJ8e5GoLzDFH350R41y8Ee54ig9Y1ZkTPNCnZicwXa2Ex3kqVAtATyZlncMA3_K3TVH5vKllPmAcZA4h4hKzRVz_Un9UM8IXHBGeOcIqblnEqP_PAmF3ZgK6p2C0LZmQvCkbcKwh4TfR9c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"_id\": \"61218ecada466f197c810428\",\n        \"todo_item_index\": 1\n    },\n    {\n        \"_id\": \"61218ec8da466f197c810423\",\n        \"todo_item_index\": 2\n    },\n    {\n        \"_id\": \"61218a2d9f637c19232e2a14\",\n        \"todo_item_index\": 3\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/todo/get?todo_item_id=61218a2d9f637c19232e2a14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"todo",
+								"get"
+							],
+							"query": [
+								{
+									"key": "todo_item_id",
+									"value": "61218a2d9f637c19232e2a14"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Todos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTIwZTMxMDgxNTM5ZTE0ZTkzNWEwMmYiLCJpYXQiOjE2Mjk1NTE5MDQyNTYsImV4cCI6MTYyOTU1MTk5MDY1Nn0.EiV1TRKS37bYCk5WRJfhN3b4M-JbNeWm5oY2DOix3cGYhEdb7YOA28uQXZCK0Nd3LOSJibiBF-MD93uVVqTQIXJwPbycSFhpOy-K0DxVAkDLq6_RI8h6gLk1J6pMwcHourb1XaImsQLdgcJca1CgtRZRdfSFNr7efwW46kjndlZix9RW9ZnL59hBAdfU88Dm2LKvtH80xf5qjmyNeI0EysvviLza4D9HNAFnZnqWz7nmEePKDQqkdB2vXfKQSYc31ZCgLxzIKLboZY8DngrRnI-yvteC4sWPW0nrJ_GwvrwIJ9AQFRhs1FdQ-DcA_g7IzObSmnmbhlfPYQ9wUusKfa2cKj2WhRdFbFVXZG8ykUYXBy-tZ0QLXdvt9s2Hrr5mF_jUKM8brmPRT35uk4ufcZOmWahJFYpP2yDDvhlprc8f8_6ZJyAf3eTp3HOjzr5BXjht8KotQ5PPqz91-DDP6Tpzvto9o_MFR-EU4YzQ4fDkEmndw-9SOoLMjuV2rtSe2LbyF6OcUS8ElWkFSGXUke4vPkCnyAJ8e5GoLzDFH350R41y8Ee54ig9Y1ZkTPNCnZicwXa2Ex3kqVAtATyZlncMA3_K3TVH5vKllPmAcZA4h4hKzRVz_Un9UM8IXHBGeOcIqblnEqP_PAmF3ZgK6p2C0LZmQvCkbcKwh4TfR9c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"_id\": \"61218ecada466f197c810428\",\n        \"todo_item_index\": 1\n    },\n    {\n        \"_id\": \"61218ec8da466f197c810423\",\n        \"todo_item_index\": 2\n    },\n    {\n        \"_id\": \"61218a2d9f637c19232e2a14\",\n        \"todo_item_index\": 3\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/todo/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"todo",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

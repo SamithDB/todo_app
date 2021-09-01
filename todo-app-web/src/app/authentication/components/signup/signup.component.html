@@ -1,0 +1,58 @@
+<mat-toolbar color="primary">
+    <span class="fill-remaining-space">SignUp to Create and Manage Your Todo List.</span>
+</mat-toolbar>
+<br>
+<div class="container"> 
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="form">
+
+    <mat-form-field class="form-element">
+        <input matInput placeholder="Firstname" formControlName="first_name">
+        <mat-error *ngIf="!formGroup.controls['first_name'].valid && formGroup.controls['first_name'].touched">
+          {{ titleAlert }}
+        </mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="form-element">
+        <input matInput placeholder="Lastname" formControlName="last_name">
+        <mat-error *ngIf="!formGroup.controls['last_name'].valid && formGroup.controls['last_name'].touched">
+          {{ titleAlert }}
+        </mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="form-element">
+      <input matInput placeholder="Username" formControlName="username">
+      <mat-error *ngIf="!formGroup.controls['username'].valid && formGroup.controls['username'].touched">
+        {{ titleAlert }}
+      </mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="form-element">
+      <input type="password" matInput placeholder="Password" formControlName="password">
+      <mat-error *ngIf="!formGroup.controls['password'].valid && formGroup.controls['password'].touched">
+        {{ titleAlert }}
+      </mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="form-element">
+        <input type="password" matInput placeholder="ConfirmPassword" formControlName="confirm_password">
+        <mat-error *ngIf="!formGroup.controls['confirm_password'].valid && formGroup.controls['confirm_password'].touched">
+          {{ titleAlert }}
+        </mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="form-element invisible">
+        <input matInput placeholder="user type" formControlName="user_type">
+        <mat-error *ngIf="!formGroup.controls['user_type'].valid && formGroup.controls['user_type'].touched">
+          {{ titleAlert }}
+        </mat-error>
+    </mat-form-field>
+
+    <div class="form-element">
+      <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!formGroup.valid">SignUp</button>
+    </div>
+
+  </form>
+
+  <br>
+  Do You Need to <button class="button" (click)="signin()">SignIn</button>
+</div>

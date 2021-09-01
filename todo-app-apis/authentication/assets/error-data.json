@@ -1,0 +1,44 @@
+{
+    "AUTH_401_UNAUTHORIZED_INVALID_DETAILS": {
+      "code": "AUTH_401_UNAUTHORIZED_INVALID_DETAILS",
+      "message": "Invalid username or password!"
+    },
+  
+    "AUTH_403_EMPTY_FIRST_NAME": {
+      "code": "AUTH_403_EMPTY_FIRST_NAME",
+      "message": "First name cannot be empty!"
+    },
+    "AUTH_403_EMPTY_LAST_NAME": {
+      "code": "AUTH_403_EMPTY_LAST_NAME",
+      "message": "First name cannot be empty!"
+    },
+    "AUTH_403_EMPTY_USERNAME": {
+      "code": "AUTH_403_EMPTY_USERNAME",
+      "message": "First name cannot be empty!"
+    },
+    "AUTH_403_EMPTY_PASSWORD": {
+      "code": "AUTH_403_EMPTY_PASSWORD",
+      "message": "First name cannot be empty!"
+    },
+    "AUTH_403_INVALID_USER_TYPE": {
+      "code": "AUTH_403_INVALID_USER_TYPE",
+      "message": "Invalid value for user type!"
+    },
+    "AUTH_403_INVALID_STATUS_STR": {
+      "code": "AUTH_403_INVALID_STATUS_STR",
+      "message": "Invalid value for user status string!"
+    },
+    "AUTH_403_EXIST": {
+      "code": "AUTH_403_EXIST",
+      "message": "User with username already exists!"
+    },
+  
+    "AUTH_500_LOGIN": {
+      "code": "AUTH_500",
+      "message": "Error occurred while authenticating user!"
+    },
+    "AUTH_500_SIGNUP": {
+      "code": "EVT_CMP_500_CREATE",
+      "message": "Error occurred while creating user!"
+    }
+  }

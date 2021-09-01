@@ -1,0 +1,121 @@
+{
+    "TASK_403_EMPTY": {
+      "code": "TASK_403_EMPTY",
+      "message": "Tasks can not be empty!"
+    },
+    "TASK_403_EMPTY_ID": {
+      "code": "TASK_403_EMPTY_ID",
+      "message": "Task id can not be empty!"
+    },
+    "TASK_403_EMPTY_IDS": {
+      "code": "TASK_403_EMPTY_IDS",
+      "message": "Task ids can not be empty!"
+    },
+    "TASK_403_EMPTY_NAME": {
+      "code": "TASK_403_EMPTY_NAME",
+      "message": "Task name can not be empty!"
+    },
+    "TASK_403_EMPTY_INDEX": {
+      "code": "TASK_403_EMPTY_INDEX",
+      "message": "Task index can not be empty!"
+    },
+    "TASK_403_EMPTY_USER_ID": {
+      "code": "TASK_403_EMPTY_USER_ID",
+      "message": "Task user id can not be empty!"
+    },
+    "TASK_403_EMPTY_EVENT_ID": {
+      "code": "TASK_403_EMPTY_EVENT_ID",
+      "message": "Task event id can not be empty!"
+    },
+    "TASK_403_EMPTY_STATUS_STR": {
+      "code": "TASK_403_EMPTY_STATUS_STR",
+      "message": "Task status string can not be empty!"
+    },
+    "TASK_403_EXIST": {
+      "code": "TASK_403_EXIST",
+      "message": "Task with index already exists!"
+    },
+    "TASK_403_DUPLICATE_ID": {
+      "code": "TASK_403_DUPLICATE_ID",
+      "message": "Duplicate task id found!"
+    },
+    "TASK_403_DUPLICATE_INDEX": {
+      "code": "TASK_403_DUPLICATE_INDEX",
+      "message": "Duplicate task index found!"
+    },
+    "TASK_403_INVALID_DATA": {
+      "code": "TASK_403_INVALID_DATA",
+      "message": "Invalid format!"
+    },
+    "TASK_403_INVALID_EVENT": {
+      "code": "TASK_403_INVALID_EVENT",
+      "message": "All tasks must be in same event!"
+    },
+    "TASK_403_INVALID_INDEX": {
+      "code": "TASK_403_INVALID_INDEX",
+      "message": "Invalid value for task index. Required `number`!"
+    },
+    "TASK_403_INVALID_INDEX_0": {
+      "code": "TASK_403_INVALID_INDEX_0",
+      "message": "Invalid value. 0 is not a valid index!"
+    },
+    "TASK_403_INVALID_INDEX_COUNT": {
+      "code": "TASK_403_INVALID_INDEX_COUNT",
+      "message": "Invalid no of tasks. Given task count does not match with the existing task count!"
+    },
+    "TASK_403_INVALID_INDEX_HIGH": {
+      "code": "TASK_403_INVALID_INDEX_HIGH",
+      "message": "Invalid value. Task index can not exceed the task count!"
+    },
+    "TASK_403_INVALID_INDEX_GAP": {
+      "code": "TASK_403_INVALID_INDEX_GAP",
+      "message": "Invalid value for task indexes. Task indexes must not have gaps!"
+    },
+    "TASK_403_INVALID_STATUS": {
+      "code": "TASK_403_INVALID_STATUS",
+      "message": "Invalid value for task status. required `boolean`!"
+    },
+    "TASK_403_INVALID_STATUS_STR": {
+      "code": "TASK_403_INVALID_STATUS_STR",
+      "message": "Invalid value for task status string."
+    },
+  
+    "TASK_404_ID": {
+      "code": "TASK_404_ID",
+      "message": "Can not find a task with id!"
+    },
+    "TASK_404_IDS": {
+      "code": "TASK_404_IDS",
+      "message": "Can not find any tasks with ids!"
+    },
+    "TASK_404_EVENT_ID": {
+      "code": "TASK_404_EVENT_ID",
+      "message": "Can not find any task with event id!"
+    },
+  
+    "TASK_500_CREATE": {
+      "code": "TASK_500_CREATE",
+      "message": "Error occurred while creating tasks!"
+    },
+    "TASK_500_UPDATE": {
+      "code": "TASK_500_UPDATE",
+      "message": "Error occurred while updating tasks!"
+    },
+    "TASK_500_UPDATE_INDEX": {
+      "code": "TASK_500_UPDATE_INDEX",
+      "message": "Error occurred while updating task indexes!"
+    },
+    "TASK_500_UPDATE_STATUS": {
+      "code": "TASK_500_UPDATE_STATUS",
+      "message": "Error occurred while updating task status!"
+    },
+    "TASK_500_DELETE": {
+      "code": "TASK_500_DELETE",
+      "message": "Error occurred while deleting tasks!"
+    },
+    "TASK_500_RETRIEVE": {
+      "code": "TASK_500_RETRIEVE",
+      "message": "Error occurred while retrieving tasks!"
+    }
+  }
+  

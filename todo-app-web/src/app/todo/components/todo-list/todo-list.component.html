@@ -1,0 +1,86 @@
+<app-navbar></app-navbar>
+<section>
+    <div class="example-button-row">
+        <button mat-raised-button color="primary" (click)="openDialog(addasd)">Add New Todo Item</button>
+        <mat-icon>open_with</mat-icon> <span>Drag and drop Toods to rearrange.</span>
+    </div>
+</section>
+<div cdkDropList class="example-list ex2" (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let todo of todos;let i = index" cdkDrag>
+        <div class="example-custom-placeholder ex3" *cdkDragPlaceholder></div>
+        {{todo.todo_item_name}}
+        <div class="ex1">
+            <mat-icon aria-hidden="false" (click)="edit(editModal,i)" class="ex1">edit</mat-icon>
+            <mat-icon aria-hidden="false" (click)="delete(todo._id)" class="ex1">delete</mat-icon>
+            <mat-button-toggle-group name="fontStyle" aria-label="Font Style" class="ex1" #group="matButtonToggleGroup" value="{{todo.todo_item_status_string}}">
+                <mat-button-toggle (click)="changeStatus(todo._id, todoStatus.Todo)" value="Todo">Todo</mat-button-toggle>
+                <mat-button-toggle (click)="changeStatus(todo._id, todoStatus.Inprogress)" value="Inprogress">Inprogress</mat-button-toggle>
+                <mat-button-toggle (click)="changeStatus(todo._id, todoStatus.Done)" value="Done">Done</mat-button-toggle>
+            </mat-button-toggle-group>
+        </div>
+    </div>
+</div>
+
+
+<ng-template #addasd let-modal>
+    <mat-dialog-content class="mat-typography">
+        <h3>Add New Todo Item</h3>
+        <form [formGroup]="todoForm">
+            <div class="container">
+                <div class="form-row">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter Todo Name</mat-label>
+                        <input matInput placeholder="To do Name" formControlName="todo_item_name">
+                        <mat-error *ngIf="todoForm.controls.todo_item_name.invalid">Please enter name</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="form-row">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter Todo Description</mat-label>
+                        <textarea matInput placeholder="To do Description" formControlName="todo_item_description"> </textarea>
+                        <mat-error *ngIf="todoForm.controls.todo_item_description.invalid">Please enter escription
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+        </form>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close>Cancel</button>
+        <button mat-button (click)="add()">Add</button>
+    </mat-dialog-actions>
+</ng-template>
+
+<ng-template #editModal let-modal>
+    <mat-dialog-content class="mat-typography">
+        <h3>Update Todo Item</h3>
+        <form [formGroup]="todoFormEdit">
+            <div class="container">
+                <div class="form-row">
+                    <mat-form-field class="invisible example-full-width">
+                        <input matInput placeholder="Todo Name" formControlName="_id">
+                    </mat-form-field>
+                </div>
+                <div class="form-row">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Change Todo Name</mat-label>
+                        <input matInput placeholder="Todo Name" formControlName="todo_item_name">
+                        <mat-error *ngIf="todoFormEdit.controls.todo_item_name.invalid">Please enter name</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="form-row">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Change Todo Description</mat-label>
+                        <textarea matInput placeholder="Todo Description" formControlName="todo_item_description"> </textarea>
+                        <mat-error *ngIf="todoFormEdit.controls.todo_item_description.invalid">Please enter description
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+        </form>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close>Cancel</button>
+        <button mat-button (click)="updateEdit()">Update</button>
+    </mat-dialog-actions>
+</ng-template>
